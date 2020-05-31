@@ -1,1 +1,48 @@
-<p>progress works!</p>
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-success" role="progressbar" [attr.ariaValuenow]="progress1" aria-valuemin="5" aria-valuemax="100" [style.width]="progress1 + '%'"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-body">
+                <h4 class="card-title">Card title</h4>
+                <div class="progress">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar" [attr.ariaValuenow]="progress2" aria-valuemin="5" aria-valuemax="100" [style.width]="progress2 + '%'"></div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Incrementors -->
+<div class="row">
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementor [name]="progress1" [legend]="legend" (changeProgress)="progress1 = $event"></app-incrementor>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-6">
+        <div class="card">
+            <div class="card-body">
+                <app-incrementor [name]="progress2" [legend]="legend" (changeProgress)="progress2 = $event"></app-incrementor>
+            </div>
+        </div>
+    </div>
+
+</div>
