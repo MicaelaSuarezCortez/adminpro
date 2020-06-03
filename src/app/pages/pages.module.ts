@@ -16,6 +16,9 @@ import { ProgressComponent } from './progress/progress.component';
 import { Graficas1Component } from './graficas1/graficas1.component';
 import { IncrementorComponent } from '../components/incrementor/incrementor.component';
 import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.component';
+import { AccountSettingsComponent } from './account-settings/account-settings.component';
+
+
 
 
 @NgModule({
@@ -26,6 +29,7 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
         Graficas1Component,
         IncrementorComponent,
         GraficoDonaComponent,
+        AccountSettingsComponent,
     ],
     exports: [
        PagesComponent,
@@ -38,8 +42,9 @@ import { GraficoDonaComponent } from '../components/grafico-dona/grafico-dona.co
     imports : [
         SharedModule,
         PAGES_ROUTES,
-         FormsModule,
-         ChartsModule,
+        FormsModule,
+        ChartsModule,
+        
     ],
     providers: [],
 })
